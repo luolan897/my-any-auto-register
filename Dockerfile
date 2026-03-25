@@ -39,7 +39,7 @@ COPY . .
 RUN rm -rf .venv frontend
 
 # 复制前端构建产物
-COPY --from=frontend-builder /app/static ./static
+COPY --from=frontend-builder /app/frontend/dist ./static
 
 # 启动脚本
 COPY docker-entrypoint.sh /docker-entrypoint.sh
